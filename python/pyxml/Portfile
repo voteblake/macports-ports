@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:05 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:00 jkh Exp $
 
 PortSystem 1.0
 
@@ -37,7 +37,7 @@ build.args			--prefix=${destroot}${prefix}
 build.cmd			python setup.py build --with-libexpat=${prefix} 
 
 destroot.args 		--prefix=${destroot}${prefix}
-destroot.location	{}
+destroot.vars	{}
 destroot.cmd			python setup.py
 
 post-destroot {

@@ -33,4 +33,4 @@ destroot {
 		${destroot}/${prefix}/share/doc/${name}"
 }
 
-destroot.location	prefix=${destroot}/${prefix}
+destroot.vars	prefix=${destroot}/${prefix}

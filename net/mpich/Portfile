@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:38 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:06 jkh Exp $
 
 PortSystem 1.0
 name		mpich
@@ -19,4 +19,4 @@ platforms	darwin
 master_sites	ftp://ftp.mcs.anl.gov/pub/mpi/
 checksums	md5 e10f2fde92b6c3264eeb00fdefbb09f1
 build.target	
-destroot.location        PREFIX=${destroot}/${prefix}
+destroot.vars        PREFIX=${destroot}/${prefix}

@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:39 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:07 jkh Exp $
 
 PortSystem	1.0
 name		mrtg   
@@ -17,7 +17,7 @@ depends_lib	lib:gd:gd
 patchfiles      patch-Makefile.in patch-configure patch-src-rateup.c patch-bin-mrtg
 configure.env	LDFLAGS="-L${prefix}/lib" \
 		CPPFLAGS="-I${prefix}/include"
-destroot.location        prefix=${destroot}/${prefix}/
+destroot.vars        prefix=${destroot}/${prefix}/
 post-destroot    { ui_info "Note that perl as of Mac OS X 10.2.4 cannot properly drop privledges, rendering the -u <user> option of mrtg useless (and fatal)"}
 ##
 ## Notes:

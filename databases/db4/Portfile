@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.14.2.1 2003/08/03 08:52:51 jkh Exp $
+# $Id: Portfile,v 1.14.2.2 2003/08/03 09:26:57 jkh Exp $
 
 PortSystem 1.0
 name		db4
@@ -22,7 +22,7 @@ variant darwin  { configure.args-append --enable-tcl \
                   --with-tcl=/System/Library/Tcl/8.3 
 }
 
-destroot.location  prefix=${destroot}${prefix} \
+destroot.vars  prefix=${destroot}${prefix} \
                     includedir=${destroot}${prefix}/include/db4 \
                     docdir=${destroot}${prefix}/share/${name}-${version}/
 

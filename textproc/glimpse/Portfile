@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.5.4.1 2003/08/03 08:54:05 jkh Exp $
+# $Id: Portfile,v 1.5.4.2 2003/08/03 09:27:14 jkh Exp $
 
 PortSystem 1.0
 name            glimpse
@@ -13,4 +13,4 @@ configure.args  --enable-strip
 patchfiles	patch-Makefile.in patch-top-Makefile.in
 build.args	LDFLAGS=-L${prefix}/lib
 
-destroot.location bindir=${destroot}${prefix}/bin libdir=${destroot}${prefix}/lib mandir=${destroot}${prefix}/man/man1
+destroot.vars bindir=${destroot}${prefix}/bin libdir=${destroot}${prefix}/lib mandir=${destroot}${prefix}/man/man1

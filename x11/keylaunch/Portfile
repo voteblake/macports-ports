@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:54:18 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:17 jkh Exp $
 
 PortSystem 1.0
 name	 	keylaunch	
@@ -15,5 +15,5 @@ checksums	md5 5a820e35f60769c656be3139495bb469
 depends_lib	lib:libX11.6:XFree86 lib:libXext.6:XFree86
 patchfiles	patch-Makefile
 worksrcdir	${name}-${version}
-destroot.location	DESTDIR=${destroot}${prefix}
+destroot.vars	DESTDIR=${destroot}${prefix}
 configure	{	system "install -o root -m 755 -d ${destroot}${prefix}/share/${name}" }

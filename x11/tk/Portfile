@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.7.2.1 2003/08/03 08:54:20 jkh Exp $
+# $Id: Portfile,v 1.7.2.2 2003/08/03 09:27:17 jkh Exp $
 
 PortSystem 1.0
 name			tk
@@ -14,7 +14,7 @@ master_sites		http://umn.dl.sourceforge.net/sourceforge/tcl/
 distname		${portname}${portversion}-src
 worksrcdir		${portname}${portversion}/unix
 checksums		md5 08ccc31fdce679ee01436278144d74ae
-destroot.location	INSTALL_ROOT=${destroot}
+destroot.vars	INSTALL_ROOT=${destroot}
 
 depends_build		lib:libtcl8.4:tcl lib:libX11.6:XFree86
 

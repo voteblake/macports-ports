@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:07 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:00 jkh Exp $
 
 PortSystem 1.0
 name                slib
@@ -23,4 +23,4 @@ checksums           md5 317ad1db777981afa6ece517bdd3a7ca
 patchfiles          patch-Makefile
 use_configure       no
 build.target        srcdir.mk
-destroot.location    prefix=${destroot}${prefix}
+destroot.vars    prefix=${destroot}${prefix}

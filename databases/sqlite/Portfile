@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.9.2.1 2003/08/03 08:52:54 jkh Exp $
+# $Id: Portfile,v 1.9.2.2 2003/08/03 09:26:58 jkh Exp $
 
 PortSystem 1.0
 
@@ -22,4 +22,4 @@ master_sites	http://www.sqlite.org/
 checksums	md5 317021b2ab5c81cc658228c18d9cba76
 worksrcdir	sqlite
 
-destroot.location prefix=${destroot}${prefix}
+destroot.vars prefix=${destroot}${prefix}

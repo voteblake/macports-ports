@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.4.2.1 2003/08/03 08:53:28 jkh Exp $
+# $Id: Portfile,v 1.4.2.2 2003/08/03 09:27:04 jkh Exp $
 
 PortSystem 1.0
 name			tcl
@@ -11,4 +11,4 @@ master_sites		http://umn.dl.sourceforge.net/sourceforge/tcl/
 distname		${portname}${portversion}-src
 worksrcdir		${portname}${portversion}/unix
 checksums		md5 42fa43432a3a2a25d45c7f650c8f78c8
-destroot.location	INSTALL_ROOT=${destroot}
+destroot.vars	INSTALL_ROOT=${destroot}

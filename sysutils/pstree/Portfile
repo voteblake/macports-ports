@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:57 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:12 jkh Exp $
 
 PortSystem 1.0
 name		pstree
@@ -23,5 +23,5 @@ build.target
 destroot.cmd	{cp}
 destroot.args	{pstree}
 destroot.target	{}
-destroot.location ${destroot}${prefix}/bin
+destroot.vars ${destroot}${prefix}/bin
 

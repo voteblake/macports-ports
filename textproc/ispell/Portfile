@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.9.4.1 2003/08/03 08:54:06 jkh Exp $
+# $Id: Portfile,v 1.9.4.2 2003/08/03 09:27:14 jkh Exp $
 
 PortSystem 1.0
 name			ispell
@@ -22,4 +22,4 @@ pre-destroot           { system "install -d ${destroot}${prefix}/bin"
                         system "install -d ${destroot}${prefix}/man"
                         cd ${workpath}/${worksrcdir}
                         reinplace "s|${prefix}|${destroot}${prefix}|g" config.sh}
-destroot.location      
+destroot.vars      

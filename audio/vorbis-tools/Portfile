@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.6.2.1 2003/08/03 08:52:50 jkh Exp $
+# $Id: Portfile,v 1.6.2.2 2003/08/03 09:26:56 jkh Exp $
 
 PortSystem 1.0
 name		vorbis-tools
@@ -33,4 +33,4 @@ configure.env \
 	CPPFLAGS="-I${prefix}/include -no-cpp-precomp"
 #build.env LDFLAGS="-lpth"
 configure.args --disable-ogg123
-destroot.location prefix=${destroot}${prefix}
+destroot.vars prefix=${destroot}${prefix}

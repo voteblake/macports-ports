@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.4.4.1 2003/08/03 08:54:15 jkh Exp $
+# $Id: Portfile,v 1.4.4.2 2003/08/03 09:27:16 jkh Exp $
 
 PortSystem 1.0
 name			wml
@@ -14,4 +14,4 @@ master_sites		http://thewml.org/distrib/ \
 
 checksums		md5 98d2df48eb879d9c09c0fe81413b3db9
 extract.sufx		.tar.gz
-destroot.location	prefix=${destroot}/${prefix}
+destroot.vars	prefix=${destroot}/${prefix}

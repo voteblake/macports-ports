@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.7.2.1 2003/08/03 08:53:06 jkh Exp $
+# $Id: Portfile,v 1.7.2.2 2003/08/03 09:27:00 jkh Exp $
 
 PortSystem 1.0
 
@@ -24,7 +24,7 @@ build.args      setup
 
 pre-destroot    { reinplace "s|\$install-prefix|${destroot}${prefix}|g" ${worksrcpath}/config.save }
 
-destroot.location
+destroot.vars
 destroot.cmd	ruby install.rb 
 
 

@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.5.2.1 2003/08/03 08:53:32 jkh Exp $
+# $Id: Portfile,v 1.5.2.2 2003/08/03 09:27:05 jkh Exp $
 
 PortSystem 1.0
 name		gnuplot
@@ -20,7 +20,7 @@ patchfiles	patch-term.h
 configure.env	LDFLAGS="-L${prefix}/lib" \
 	CPPFLAGS="-I${prefix}/include -no-cpp-precomp"
 configure.args	--with-readline=gnu --with-gd --without-x
-destroot.location prefix=${destroot}${prefix}
+destroot.vars prefix=${destroot}${prefix}
 
 variant x11 {
 	depends_lib	lib:libX11.6:XFree86 lib:libgd:gd lib:libreadline:readline

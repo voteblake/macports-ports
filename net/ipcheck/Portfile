@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:36 jkh Exp $
+# $Id: Portfile,v 1.1.2.2 2003/08/03 09:27:06 jkh Exp $
 PortSystem 1.0
 name		ipcheck
 version		0.205
@@ -27,7 +27,7 @@ post-patch	{ reinplace \
 configure	{}
 build.cmd	true
 
-destroot.location	${destroot}${prefix}
+destroot.vars	${destroot}${prefix}
 
 post-destroot	{ system "install -m 755 ${worksrcpath}/ipcheck.205 \
 				${destroot}${prefix}/bin/ipcheck" }

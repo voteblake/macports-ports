@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.10.2.1 2003/08/03 08:53:42 jkh Exp $
+# $Id: Portfile,v 1.10.2.2 2003/08/03 09:27:08 jkh Exp $
 
 PortSystem 1.0
 name		pycurl
@@ -24,7 +24,7 @@ build		{}
 build.cmd	python setup.py install --prefix=${destroot}${prefix} \
 	--curl-config=${prefix}/bin/curl-config
 destroot.target	{}
-destroot.location	{}
+destroot.vars	{}
 post-destroot {
 	# remind user to define/add installed path to python path
 	ui_msg "\nbe sure the install path is included in your python path:"

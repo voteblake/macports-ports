@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2.2.1 2003/08/03 08:52:59 jkh Exp $
+# $Id: Portfile,v 1.2.2.2 2003/08/03 09:26:59 jkh Exp $
 
 PortSystem    	1.0
 name          	flawfinder
@@ -18,7 +18,7 @@ checksums     	md5 a6746b5e8b443e777ebd223edae33e6d
 use_configure 	no
 build.cmd   	make
 build.target
-destroot.location
+destroot.vars
 destroot      { system "cd ${worksrcpath} && install -o root -m 555 \
 	             ${name} ${destroot}${prefix}/bin/"
                system "cd ${worksrcpath} && install -o root -m 444 \

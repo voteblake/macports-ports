@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2.2.1 2003/08/03 08:53:51 jkh Exp $
+# $Id: Portfile,v 1.2.2.2 2003/08/03 09:27:11 jkh Exp $
 
 PortSystem 1.0
 name			openssl
@@ -23,7 +23,7 @@ depends_lib		lib:libz.1:zlib
 configure.cmd		./config
 configure.args		--openssldir=${prefix}/etc/openssl zlib no-asm no-krb5 shared
 
-destroot.location	INSTALL_PREFIX=${destroot}
+destroot.vars	INSTALL_PREFIX=${destroot}
 destroot.args		MANDIR=${prefix}/man
 
 variant darwin	{
