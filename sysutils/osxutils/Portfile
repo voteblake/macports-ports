@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.4 2003/07/31 22:24:47 waqar Exp $
+# $Id: Portfile,v 1.4.2.1 2003/08/03 08:53:57 jkh Exp $
 
 PortSystem 1.0
 name		osxutils
@@ -24,4 +24,4 @@ pre-configure   {
 }
 use_configure   no
 build.target    {}
-install.destroot  destdir=${destroot}
+destroot.location  destdir=${destroot}

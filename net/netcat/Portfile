@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.13 2003/03/03 07:09:35 mij Exp $
+# $Id: Portfile,v 1.13.4.1 2003/08/03 08:53:40 jkh Exp $
 
 PortSystem 1.0
 name		netcat
@@ -31,7 +31,7 @@ variant darwin {
 	patchfiles	patch-Makefile
 }
 
-install		{ cd ${workpath}/${worksrcdir}
+destroot	{ cd ${workpath}/${worksrcdir}
 		  system "install -o root -m 755 -d ${destroot}/${prefix}/bin"
 		  system "install -o root -m 755 -d ${destroot}/${prefix}/share/doc/netcat"
 		  system "install -o root -m 755 -s -c nc ${destroot}/${prefix}/bin"

@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.5 2003/07/30 22:06:10 fkr Exp $
+# $Id: Portfile,v 1.5.2.1 2003/08/03 08:54:03 jkh Exp $
 
 PortSystem 1.0
 name		dos2unix
@@ -13,7 +13,7 @@ configure	{}
 build		{ cd ${worksrcpath}
 		  system "gcc -O dos2unix.c -o dos2unix" }
 
-install		{ cd ${worksrcpath}
+destroot	{ cd ${worksrcpath}
 		  system "install -o root -m 755 -d ${destroot}${prefix}/bin"
 		  system "install -o root -m 755 -d ${destroot}${prefix}/man/man1"
 		  system "install -o root -m 755 -cs dos2unix ${destroot}${prefix}/bin"

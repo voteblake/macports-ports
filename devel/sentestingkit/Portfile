@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.7 2003/03/25 16:12:15 michaelm Exp $
+# $Id: Portfile,v 1.7.2.1 2003/08/03 08:53:06 jkh Exp $
 
 PortSystem 1.0
 name				sentestingkit
@@ -24,6 +24,6 @@ build.cmd 			pbxbuild
 
 build.target			
 
-install				{system "cd ${worksrcpath} && ditto -v build/SenTestingKit.framework \
+destroot			{system "cd ${worksrcpath} && ditto -v build/SenTestingKit.framework \
 					   ${destroot}/Library/Frameworks/SenTestingKit.framework "}
 

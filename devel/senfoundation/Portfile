@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.6 2003/03/25 16:12:14 michaelm Exp $
+# $Id: Portfile,v 1.6.2.1 2003/08/03 08:53:06 jkh Exp $
 
 PortSystem 1.0
 name					senfoundation
@@ -21,6 +21,5 @@ configure 				{}
 build.cmd 				pbxbuild
 build.target	
 
-install				{system "cd ${worksrcpath} && ditto -v build/SenFoundation.framework \
+destroot			{system "cd ${worksrcpath} && ditto -v build/SenFoundation.framework \
 					   ${destroot}/Library/Frameworks/SenFoundation.framework "}
-

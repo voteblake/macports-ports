@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1 2003/04/27 15:57:26 jpm Exp $
+# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:34 jkh Exp $
 
 PortSystem 1.0
 name			bind9
@@ -24,7 +24,7 @@ post-patch	{
 	system "sed -e \"s=%%PREFIX%%=${prefix}=g\" ${filespath}/bind.sh >${portpath}/bind.sh"
 }
 
-post-install	{
+post-destroot	{
 	file mkdir ${destroot}${prefix}/etc/rc.d/
 	file mkdir ${destroot}${prefix}/var/run/
 	file mkdir ${destroot}${prefix}/var/named/

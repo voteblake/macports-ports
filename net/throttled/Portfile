@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1 2003/07/30 00:24:10 fkr Exp $
+# $Id: Portfile,v 1.1.2.1 2003/08/03 08:53:44 jkh Exp $
 
 PortSystem 1.0
 name		throttled
@@ -32,9 +32,9 @@ configure	{ reinplace "s|/usr/local/sbin/|${prefix}/sbin/|g" \
 build.target
 build.dir	${worksrcpath}/src
 
-install.cmd	true
+destroot.cmd	true
 
-post-install	{ system "install -m 755 ${worksrcpath}/src/throttled \
+post-destroot	{ system "install -m 755 ${worksrcpath}/src/throttled \
 				${destroot}${prefix}/sbin \
 		&& install -v -d ${destroot}${prefix}/etc/rc.d \
 		&& install -v -d ${destroot}${prefix}/share/doc/throttled \

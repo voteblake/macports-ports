@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2 2003/06/02 07:37:12 fkr Exp $
+# $Id: Portfile,v 1.2.2.1 2003/08/03 08:53:52 jkh Exp $
 
 PortSystem 1.0
 name		systrace	
@@ -27,5 +27,5 @@ worksrcdir	${name}-1.0
 extract.only	usr-${name}-2003-01-26.tar.gz
 pre-configure {	system "cp ${prefix}/var/db/dports/distfiles/systrace.h \
 			/usr/include/sys/" }
-post-install  { ui_msg "\nThis port installed the following file OUTSIDE of the DarwinPorts prefix:\n \
+post-destroot  { ui_msg "\nThis port installed the following file OUTSIDE of the DarwinPorts prefix:\n \
 			/usr/include/sys/systrace.h\n" }

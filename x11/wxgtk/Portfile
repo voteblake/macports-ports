@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.1 2003/04/09 22:17:59 jpm Exp $
+# $Id: Portfile,v 1.1.2.1 2003/08/03 08:54:21 jkh Exp $
 
 PortSystem 1.0
 name		wxgtk
@@ -31,7 +31,7 @@ configure.env \
 configure.args	--with-gtk --with-libpng --with-libjpeg --with-libtiff \
 	--with-freetype
 build.target	
-install.destroot	prefix=${destroot}${prefix}
+destroot.location	prefix=${destroot}${prefix}
 
 variant darwin {
 	patchfiles	darwin-shared-ld-sh

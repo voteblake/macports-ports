@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.35 2003/03/03 07:31:47 mij Exp $
+# $Id: Portfile,v 1.35.4.1 2003/08/03 08:54:15 jkh Exp $
 
 PortSystem 1.0
 name		XFree86
@@ -19,7 +19,7 @@ patchfiles	patch-darwin.cf
 configure	{}
 worksrcdir	xc
 build.target	World
-install.target	install install.man
+destroot.target	install install.man
 
 # If getting the development version, check out of CVS instead
 variant devel {

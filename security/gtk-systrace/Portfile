@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2 2003/04/25 03:00:54 fkr Exp $
+# $Id: Portfile,v 1.2.2.1 2003/08/03 08:53:50 jkh Exp $
 
 PortSystem 1.0
 name		gtk-systrace	
@@ -16,5 +16,5 @@ depends_lib	lib:libgtk.1:gtk
 depends_build	bin:systrace:systrace
 checksums	md5 6b61ac8174707483a404599c7e8d8238
 worksrcdir	notification-0.1
-post-install {	cd ${destroot}${prefix}/bin
+post-destroot {	cd ${destroot}${prefix}/bin
 		system "ln -s notification xsystrace" }

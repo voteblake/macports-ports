@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.17 2003/04/16 06:42:25 eric Exp $
+# $Id: Portfile,v 1.17.2.1 2003/08/03 08:53:21 jkh Exp $
 
 PortSystem 1.0
 name		epic
@@ -29,4 +29,4 @@ build.env	LOGNAME=${env(USER)}
 
 patchfiles	patch-Makefile.in
 
-install.args	prefix=${destroot}${prefix}
+destroot.args	prefix=${destroot}${prefix}

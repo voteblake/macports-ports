@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2 2003/04/19 14:48:38 fkr Exp $
+# $Id: Portfile,v 1.2.2.1 2003/08/03 08:53:51 jkh Exp $
 
 PortSystem 1.0
 name			openssl
@@ -23,8 +23,8 @@ depends_lib		lib:libz.1:zlib
 configure.cmd		./config
 configure.args		--openssldir=${prefix}/etc/openssl zlib no-asm no-krb5 shared
 
-install.destroot	INSTALL_PREFIX=${destroot}
-install.args		MANDIR=${prefix}/man
+destroot.location	INSTALL_PREFIX=${destroot}
+destroot.args		MANDIR=${prefix}/man
 
 variant darwin	{
 	patchfiles		patch-Makefile.org

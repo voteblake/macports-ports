@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.2 2003/06/30 23:19:58 macdome Exp $
+# $Id: Portfile,v 1.2.2.1 2003/08/03 08:52:57 jkh Exp $
 
 PortSystem 1.0
 name		class-dump
@@ -21,7 +21,7 @@ worksrcdir 	${name}.${version}/src
 configure	{}
 build.cmd 	pbxbuild
 build.target
-install.destroot
+destroot.location
 
-install { 	system "cd ${worksrcpath} && install -m 555 \
+destroot { 	system "cd ${worksrcpath} && install -m 555 \
 			build/class-dump ${destroot}${prefix}/bin/" }

@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.19 2003/06/29 20:45:16 mij Exp $
+# $Id: Portfile,v 1.19.2.1 2003/08/03 08:54:07 jkh Exp $
 
 PortSystem 1.0
 name		libiconv
@@ -19,7 +19,7 @@ checksums	md5 0c99a05e0c3c153bac1c960f78711155
 post-patch	{ reinplace "s|/doc/libiconv|/share/doc/libiconv|g" \
 		    ${worksrcpath}/man/Makefile.in }
 
-pre-install	{ system "install -o root -m 755 -d \
+pre-destroot	{ system "install -o root -m 755 -d \
 		    ${destroot}${prefix}/share/doc/libiconv" }
 
-set install.destroot prefix=${destroot}${prefix}
+set destroot.location prefix=${destroot}${prefix}

@@ -1,4 +1,4 @@
-# $Id: Portfile,v 1.5 2003/03/03 07:13:34 mij Exp $
+# $Id: Portfile,v 1.5.4.1 2003/08/03 08:53:50 jkh Exp $
 
 PortSystem 1.0
 name		keychain
@@ -19,7 +19,7 @@ use_bzip2	yes
 extract.sufx	.bz2
 configure {}
 build {}
-install {
-	system "install -d ${destroot}${prefix}/bin"
+destroot {
+	file mkdir ${destroot}${prefix}/bin
 	system "install -m 755 ${worksrcpath}/keychain ${destroot}${prefix}/bin"
 }
