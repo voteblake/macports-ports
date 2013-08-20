@@ -49,18 +49,18 @@ switch -regexp ${subport} {
 
 
 # Dependencies
-depends_lib port:apr \
-            port:apr-util \
-            port:cyrus-sasl2 \
-            port:db46 \
-            port:expat \
-            port:gettext \
-            port:libcomerr \
-            port:libiconv \
-            port:libmagic \
-            port:serf1 \
-            port:sqlite3 \
-            port:zlib
+depends_lib     port:apr \
+                port:apr-util \
+                port:cyrus-sasl2 \
+                port:db46 \
+                port:expat \
+                port:gettext \
+                port:libcomerr \
+                port:libiconv \
+                port:libmagic \
+                port:serf1 \
+                port:sqlite3 \
+                port:zlib
 switch -regexp ${subport} {
     perl    {depends_lib-append port:${name} port:perl${perl5.major}}
     default {depends_run        port:curl-ca-bundle}
@@ -76,10 +76,10 @@ checksums       sha1    7705819a0037c14fb32eef36f2e57a803217c689 \
 
 
 # Patch
+patchfiles      config_impl.h.patch \
+                patch-swig-perl-native-core.c.diff
 switch -regexp ${subport} {
-    perl    {patchfiles patch-swig-perl-native-core.c.diff}
     default {
-        patchfiles      config_impl.h.patch
         post-patch {
             reinplace "s|__PREFIX__|${prefix}|" \
                 ${worksrcpath}/subversion/libsvn_subr/config_impl.h
