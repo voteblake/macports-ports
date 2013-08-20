@@ -132,7 +132,7 @@ switch -regexp ${subport} {
             fs-traverse pl ${destroot} {
                 if {[file tail ${pl}] eq {.packlist}} {
                     reinplace "s|${destroot}||" ${pl}
-                    ui_info "Fixing packlist '${pl}'"
+                    ui_info "Fixed packlist '${pl}'"
                 }
             }
         }
