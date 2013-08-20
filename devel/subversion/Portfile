@@ -78,13 +78,9 @@ checksums       sha1    7705819a0037c14fb32eef36f2e57a803217c689 \
 # Patch
 patchfiles      config_impl.h.patch \
                 patch-swig-perl-native-core.c.diff
-switch -regexp ${subport} {
-    default {
-        post-patch {
-            reinplace "s|__PREFIX__|${prefix}|" \
-                ${worksrcpath}/subversion/libsvn_subr/config_impl.h
-        }
-    }
+post-patch {
+    reinplace "s|__PREFIX__|${prefix}|" \
+        ${worksrcpath}/subversion/libsvn_subr/config_impl.h
 }
 
 
