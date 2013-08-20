@@ -170,14 +170,14 @@ switch -regexp ${subport} {
         test.target         check
         test.env            CLEANUP=true
         pre-test {
-            set x {}
+            set libs {}
             fs-traverse dir ${worksrcpath}/subversion {
-                if {[file tail ${dir}] == ".libs" && [file isdirectory ${dir}]} {
-                    lappend x ${dir}
+                if {[llength [glob -nocomplain ${dir}/*.dylib]] > 0} {
+                    lappend libs ${dir}
                     continue
                 }
             }
-            test.env-append DYLD_LIBRARY_PATH=[join ${x} ":"]
+            test.env-append DYLD_LIBRARY_PATH=[join ${libs} :]
         }
     }
 }
