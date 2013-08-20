@@ -63,7 +63,7 @@ depends_lib     port:apr \
                 port:zlib
 switch -regexp ${subport} {
     perl    {depends_lib-append port:${name} port:perl${perl5.major}}
-    default {depends_run        port:curl-ca-bundle}
+    default {depends_run        path:share/curl/curl-ca-bundle.crt:curl-ca-bundle}
 }
 
 
