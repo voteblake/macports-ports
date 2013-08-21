@@ -98,13 +98,6 @@ configure.args  --disable-keychain \
 switch -regexp ${subport} {
     perl    {configure.args-append  PERL=${perl5.bin}}
 }
-pre-configure {
-    reinplace "s|hardcode_direct=yes|hardcode_direct=no|g" \
-        ${worksrcpath}/configure
-}
-post-configure {
-    reinplace "s|need_relink=yes|need_relink=no|g" ${worksrcpath}/libtool
-}
 
 
 # Build
@@ -163,7 +156,7 @@ subport ${name} {
 
 
 # Test
-test.run    yes
+test.run yes
 switch -regexp ${subport} {
     perl    {test.target    check-swig-pl}
     default {
