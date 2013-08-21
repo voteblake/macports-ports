@@ -33,7 +33,7 @@ long_description    Subversion (svn) is a version control system \
                     while fixing many outstanding problems with CVS.
 homepage            http://subversion.apache.org/
 
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl {
         categories-append       perl
         description             Perl ${perl5.major} bindings for the \
@@ -61,7 +61,7 @@ depends_lib     port:apr \
                 port:serf1 \
                 port:sqlite3 \
                 port:zlib
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl    {depends_lib-append port:${name} port:perl${perl5.major}}
     default {depends_run        path:share/curl/curl-ca-bundle.crt:curl-ca-bundle}
 }
@@ -95,13 +95,13 @@ configure.args  --disable-keychain \
                 --with-zlib=${prefix} \
                 --without-apxs \
                 --without-gnome-keyring
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl    {configure.args-append  PERL=${perl5.bin}}
 }
 
 
 # Build
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl {
         use_parallel_build          no
         build.target                swig-pl
@@ -111,7 +111,7 @@ switch -regexp ${subport} {
 
 
 # Destroot
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl {
         destroot {
             system -W ${worksrcpath} \
@@ -157,7 +157,7 @@ subport ${name} {
 
 # Test
 test.run yes
-switch -regexp ${subport} {
+switch -regexp -- ${subport} {
     perl    {test.target    check-swig-pl}
     default {
         test.target         check
