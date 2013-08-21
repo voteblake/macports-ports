@@ -1,0 +1,146 @@
+--- configure.orig	2013-07-16 17:46:43.000000000 -0400
++++ configure	2013-08-20 23:15:58.000000000 -0400
+@@ -22861,7 +22861,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
++      ac_cv_python_includes="`$PYTHON-config --includes`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_includes" >&5
+@@ -22879,7 +22879,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_compile="`$PYTHON ${abs_srcdir}/build/get-py-info.py --compile`"
++      ac_cv_python_compile="$CC"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_compile" >&5
+@@ -22892,7 +22892,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_link="`$PYTHON ${abs_srcdir}/build/get-py-info.py --link`"
++      ac_cv_python_link="$CC `$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_link" >&5
+@@ -22905,7 +22905,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_libs="`$PYTHON ${abs_srcdir}/build/get-py-info.py --libs`"
++      ac_cv_python_libs="`$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_libs" >&5
+@@ -23344,7 +23344,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
++      ac_cv_python_includes="`$PYTHON-config --includes`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_includes" >&5
+@@ -23362,7 +23362,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_compile="`$PYTHON ${abs_srcdir}/build/get-py-info.py --compile`"
++      ac_cv_python_compile="$CC"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_compile" >&5
+@@ -23375,7 +23375,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_link="`$PYTHON ${abs_srcdir}/build/get-py-info.py --link`"
++      ac_cv_python_link="$CC `$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_link" >&5
+@@ -23388,7 +23388,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_libs="`$PYTHON ${abs_srcdir}/build/get-py-info.py --libs`"
++      ac_cv_python_libs="`$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_libs" >&5
+@@ -23827,7 +23827,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
++      ac_cv_python_includes="`$PYTHON-config --includes`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_includes" >&5
+@@ -23845,7 +23845,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_compile="`$PYTHON ${abs_srcdir}/build/get-py-info.py --compile`"
++      ac_cv_python_compile="$CC"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_compile" >&5
+@@ -23858,7 +23858,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_link="`$PYTHON ${abs_srcdir}/build/get-py-info.py --link`"
++      ac_cv_python_link="$CC `$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_link" >&5
+@@ -23871,7 +23871,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_libs="`$PYTHON ${abs_srcdir}/build/get-py-info.py --libs`"
++      ac_cv_python_libs="`$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_libs" >&5
+@@ -24313,7 +24313,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
++      ac_cv_python_includes="`$PYTHON-config --includes`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_includes" >&5
+@@ -24331,7 +24331,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_compile="`$PYTHON ${abs_srcdir}/build/get-py-info.py --compile`"
++      ac_cv_python_compile="$CC"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_compile" >&5
+@@ -24344,7 +24344,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_link="`$PYTHON ${abs_srcdir}/build/get-py-info.py --link`"
++      ac_cv_python_link="$CC `$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_link" >&5
+@@ -24357,7 +24357,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+ 
+-      ac_cv_python_libs="`$PYTHON ${abs_srcdir}/build/get-py-info.py --libs`"
++      ac_cv_python_libs="`$PYTHON-config --ldflags`"
+ 
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_python_libs" >&5

@@ -1,0 +1,10 @@
+# $Id$
+
+PortSystem 1.0
+
+name			subversion-python24bindings
+version			1.8.1
+revision		2
+
+replaced_by		subversion-python27bindings
+PortGroup		obsolete 1.0

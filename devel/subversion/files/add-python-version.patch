@@ -1,0 +1,98 @@
+Index: Makefile.in
+===================================================================
+--- Makefile.in	(revision 1510369)
++++ Makefile.in	(working copy)
+@@ -81,8 +81,8 @@
+ swig_rb_libdir = @libdir@
+ 
+ ### these possibly need further discussion
+-swig_pydir = @libdir@/svn-python/libsvn
+-swig_pydir_extra = @libdir@/svn-python/svn
++swig_pydir = @libdir@/svn-python__PYTHON_BRANCH__/libsvn
++swig_pydir_extra = @libdir@/svn-python__PYTHON_BRANCH__/svn
+ swig_pldir = @libdir@/svn-perl
+ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/svn/ext
+ toolsdir = @bindir@/svn-tools
+Index: build.conf
+===================================================================
+--- build.conf	(revision 1510369)
++++ build.conf	(working copy)
+@@ -427,7 +427,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = core.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_diff libsvn_subr apr
+ description = Subversion core library bindings
+ include-runtime = yes
+@@ -436,7 +436,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_client.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_client libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion client library bindings
+@@ -445,7 +445,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_delta.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_delta libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion delta library bindings
+@@ -454,7 +454,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_diff.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_diff libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion diff library bindings
+@@ -463,7 +463,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_fs.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_fs libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion FS library bindings
+@@ -472,7 +472,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_ra.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_ra libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion RA library bindings
+@@ -481,7 +481,7 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_repos.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_repos libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion repository library bindings
+@@ -490,13 +490,13 @@
+ type = swig
+ path = subversion/bindings/swig
+ sources = svn_wc.i
+-libs = libsvn_swig_py libsvn_swig_perl libsvn_swig_ruby
++libs = libsvn_swig_py__PYTHON_VERSION__ libsvn_swig_perl libsvn_swig_ruby
+        libsvn_wc libsvn_subr apr
+ nonlibs = swig_core
+ description = Subversion WC library bindings
+ 
+ # SWIG utility library for Python modules
+-[libsvn_swig_py]
++[libsvn_swig_py__PYTHON_VERSION__]
+ type = swig_lib
+ lang = python
+ path = subversion/bindings/swig/python/libsvn_swig_py
