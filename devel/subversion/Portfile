@@ -38,6 +38,7 @@ foreach {ver branch} {25 2.5 26 2.6 27 2.7} {
 
 # General
 version             1.8.3
+revision            2
 categories          devel
 platforms           darwin
 license             Apache-2
