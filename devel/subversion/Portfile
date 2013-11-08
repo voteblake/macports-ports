@@ -37,8 +37,8 @@ foreach {ver branch} {25 2.5 26 2.6 27 2.7} {
 
 
 # General
-version             1.8.3
-revision            2
+version             1.8.4
+revision            1
 categories          devel
 platforms           darwin
 license             Apache-2
@@ -65,7 +65,6 @@ switch -regexp -- ${subport} {
                                 ${python.branch}.
     }
     default {
-        revision                [expr {${revision} + 1}]
         description             A version control system designed to \
                                 be a better CVS
     }
@@ -95,9 +94,9 @@ switch -regexp -- ${subport} {
 # Fetch and checksum
 master_sites    apache:subversion
 use_bzip2       yes
-checksums       sha1    e328e9f1c57f7c78bea4c3af869ec5d4503580cf \
-                rmd160  9e27b43cdff0c4c6e3c80fee56a332ad4bfa9982 \
-                sha256  fd8817b3d96530dfcc7f0a0b5d42f80f2b704ed23aaab580b72a146383d6271b
+checksums       sha1    6e7ac5b56ec22995c763a668c658577f96f2c090 \
+                rmd160  d19ea5185164e1ae0caed4ddbc1b6ae1a6976f8d \
+                sha256  87df1e36750d20b8206b97c2603848da6ccbf8d1ec40cf62c1d7a83b0f2f8276
 
 
 # Patch
