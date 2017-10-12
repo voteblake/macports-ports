@@ -43,7 +43,7 @@ variant universal {}
 configure.cflags-append "${configure.cflags} [get_canonical_archflags cc]"
 configure.universal_args
 
-configure.args      --enable-mobile-ipv6 --conf-files-dir=${prefix}/etc/bro --spooldir=${prefix}/var/spool/bro --logdir=${prefix}/var/log/bro
+configure.args      --enable-mobile-ipv6 --conf-files-dir=${prefix}/etc/bro --spooldir=${prefix}/var/spool/bro --logdir=${prefix}/var/log/bro --with-openssl=${prefix}/lib
 
 post-patch {
     reinplace "s|\${BroBase}/spool|\${BroBase}/var/spool/bro|" ${worksrcpath}/aux/broctl/BroControl/options.py
